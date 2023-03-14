@@ -1,18 +1,27 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import './navigation.css';
 
-function Navigation() {
-  return (
+const Navigation = () => (
+  <>
     <nav>
-      <ul className="links">
-        <li><NavLink to="/rockets" className="lists">Rockets</NavLink></li>
-        <li><NavLink to="/dragons" className="lists">Dragons</NavLink></li>
-        <li><NavLink to="/missions" className="lists">Missions</NavLink></li>
-        <li><NavLink to="profile" className="lists">My Profile</NavLink></li>
-      </ul>
+      <div className="links">
+        <NavLink to="/" className="lists">
+          Rockets
+        </NavLink>
+        <NavLink to="/missions" className="list">
+          Missions
+        </NavLink>
+        <NavLink to="/dragons" className="list">
+          Dragons
+        </NavLink>
+        <NavLink to="/profile" className="list">
+          My Profile
+        </NavLink>
+      </div>
     </nav>
-  );
-}
+    <Outlet />
+  </>
+);
 
 export default Navigation;
