@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import Rockets from './Rocket';
+import '@testing-library/jest-dom';
 
 const mockStore = configureMockStore([]);
 
